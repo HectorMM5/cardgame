@@ -26,9 +26,14 @@ public class DeckOfCards {
         for (int i = 0; i < n; i++) {
             int chosenCard = rng.nextInt(0, 52);
 
-            for (Integer ing : chosenCards) {
-                while (ing == chosenCard) {
-                    chosenCard = rng.nextInt(1, 53);
+            boolean verifying = true;
+            while (verifying) {
+                int finalChosenCard = chosenCard;
+                boolean isUnique = chosenCards.stream().noneMatch(ing -> ing == finalChosenCard);
+                if (isUnique) {
+                    verifying = false;
+                } else {
+                    chosenCard = rng.nextInt(0, 52);
                 }
             }
 
