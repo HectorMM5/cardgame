@@ -1,0 +1,5 @@
+cardgame\cards\DeckOfCards.class
+cardgame\GUI\Main.class
+cardgame\cards\PlayingCard.class
+cardgame\GUI\Main$2.class
+cardgame\GUI\Main$1.class
